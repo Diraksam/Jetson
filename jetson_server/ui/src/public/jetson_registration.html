@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<!--dependencies for gradient-->
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="jetson_registration.css">
+  <script type="text/javascript" src="jetson_registration.js"></script>
+</head>
+<!--end of dependencies for gradient-->
+
+<!--START OF THE GRADIENT BACKGROUND-->
+  <body>
+    <div id="gradient" />
+</body>
+<!--END OF THE GRADIENT BACKGROUND-->
+
+<!--START OF THE NAVIGATION BAR-->
+<body>
+  
+  <!-- Use any element to open the sidenav -->
+  <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">Account</a>
+  <!--Check functionality of user-->
+  <a href="#">Admin</a>
+  <a href="#">Contact</a>
+  <a href="jetson_registration.html">Register</a>
+</div>
+
+<!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+<div id="main">
+  <span style="cursor:pointer" onclick="openNav()">&#9776; </span>
+</div> <!-- End SideNav -->
+
+  <!--When you click the WebPortal Authentication, it takes you back to the login screen-->
+  <a href="/" onclick="window.location.href='/'; return false;">
+    <h2> WebPortal Authentication</h2>
+  </a>
+
+</body>
+<!--END OF THE NAVIGATION BAR-->
+
+<!--START OF THE LOGIN BOX-->
+<div id="login-box">
+  
+  <form id="form_header">
+    <h1>REGISTRATION FORM</h1>
+  
+  <div class="left">
+    <input type="text" name="username" placeholder="Username" />
+    <input type="text" name="email" placeholder="Email Address" />
+    <input type="password" name="password" placeholder="Password" />
+    <input type="password" name="password2" placeholder="Retype password" />
+    
+    <!--Wrapping in a form for safety-->
+      <input type="submit" name="signup_submit" value="Register" onclick="registration()"/>
+  </div>
+     <!--End div class left-->
+ </form>
+ 
+</div>
+  <!--End div login-box-->
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-storage.js"></script>
+<script src="jetson_firebase.js"></script>
+</body>
+</html>

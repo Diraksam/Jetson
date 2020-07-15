@@ -1,0 +1,212 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500);
+*:focus {
+  outline: none;
+}
+
+/* START OF GRADIENT
+ * background credit: https://speckyboy.com/css-background-effects
+ */
+@import url(
+  https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,
+  700|Open+Sans:400,
+  300,
+  600
+);
+* {
+  box-sizing: border-box;
+}
+html, body {
+  font-family: "open sans", helvetica, arial, sans;
+  background: url(http://farm8.staticflickr.com/7064/6858179818_5d652f531c_h.jpg)
+    no-repeat center center fixed;
+  -webkit-background-size: cover;
+     -moz-background-size: cover;
+       -o-background-size: cover;
+  background-size: cover;
+  margin: 0; height: 100%; overflow: hidden
+}
+#gradient {
+  width: 100%;
+  height: 100%;
+  position:absolute;
+  padding: 0px;
+  margin: 0px;
+  border-style:none;
+}
+/*END OF GRADIENT BACKGROUND*/
+
+/*WebPortal Authentication*/
+h2{
+border-radius:10px;
+    background-color: #000000;
+    color: #FFFFFF;
+    font-size:40px;
+    padding-bottom: 30px;
+    padding-top:30px;
+    padding-left:15px;
+    padding-right:15px;
+    position:absolute;
+    border:solid #000000;
+    top:5%;    
+    left:50%; 
+  
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+     transform: translate(-50%, -50%);
+    box-shadow: 3px 10px 5px rgba(10, 50, 0, 0.25);
+  }
+
+/*START OF THE LOGIN BOX*/
+#login-box {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  border-radius:10px;
+
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 540px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  background: #FFF;
+}
+
+
+/*PUSHES FIELD RIGHT {USERNAME, EMAIL, PASSWORD, CONFIRM PASSWORD*/
+.left {
+  position:absolute;
+  width: 600px;
+  height: 400px;
+  padding: 40px;
+}
+
+/*REGISTRATION FORM*/
+h1 {
+  border-radius:5px;
+  font-family: "open sans condensed";
+  font-weight: 200;
+  font-size: 1.35em;
+  padding-top:20px;
+  padding-bottom:20px;
+  margin:0;
+  background: #000;
+  color: #fff;
+  text-align:center;
+}
+
+/*Adjusts the size/ spacing/ color of the fields*/
+input[type="text"],
+input[type="password"] {
+  width: 325px;
+  height: 50px;
+  font-weight: 400;
+  font-size: 15px;
+  margin-bottom: 25px;
+  padding: 1px;
+  
+  display: block;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 1px solid #AAA;
+  font-family: 'Roboto', sans-serif; 
+  transition: 0.2s ease;
+}
+
+/*The input types*/
+input[type="text"]:focus,
+input[type="password"]:focus {
+  color: #16a085;
+  border-bottom: 2px solid #16a085;
+  transition: 0.2s ease;
+}
+
+/*The sign me up button*/
+input[type="submit"] {
+  position:relative;
+  left:20%;
+  margin-top: 15px;
+  width: 120px;
+  height: 50px;
+  font-size:15px;
+  font-weight: 425;
+  border-radius: 4px;
+  
+  text-transform: uppercase;
+  background: #000;
+  cursor: pointer;
+  border: none;
+  color: #FFF;
+  font-family: 'Roboto', sans-serif;
+  transition: 0.1s ease; 
+}
+
+/*What happens when you hover, etc*/
+input[type="submit"]:hover,
+input[type="submit"]:focus {
+  opacity: 0.8;
+  transition: 0.1s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+/*What happens when you activate*/
+input[type="submit"]:active {
+  opacity: 1;
+  transition: 0.1s ease;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+/*END OF REGISTRATION FORM*/
+
+
+ /* The side navigation menu */
+.sidenav {
+  height: 100%;           /* 100% Full-height */
+  width: 0;               /* 0 width - change this with JavaScript */
+  position: fixed;        /* Stay in place */
+  z-index: 1;             /* Stay on top */
+  top: 0;
+  left: 0;
+  background-color: #111; /* Black*/
+  overflow-x: hidden;     /* Disable horizontal scroll */
+  padding-top: 60px;      /* Place content 60px from the top */
+  transition: 0.5s;       /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left .5s;
+  padding: 20px;
+  font-size:55px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+} 
+/*END SIDE NAVIGATION BAR*/

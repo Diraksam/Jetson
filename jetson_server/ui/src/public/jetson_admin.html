@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<!--dependencies for gradient-->
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="jetson_admin.css">
+  <script type="text/javascript" src="jetson_admin.js" defer></script>
+  <script type="text/javascript" src="jetson_control.js" defer></script>
+</head>
+<!--end of dependencies for gradient-->
+
+<!--START OF THE GRADIENT BACKGROUND-->
+  <body>
+    <div id="gradient" />
+</body>
+<!--END OF THE GRADIENT BACKGROUND-->
+
+<!--START OF THE NAVIGATION BAR-->
+<body>
+  
+  <!-- Use any element to open the sidenav -->
+  <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">Admin</a>
+  <!--Shoudln't be able to click-->
+  <a href="#">Register</a>
+  <a href="#">Logout</a>
+</div>
+
+<!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+<div id="main">
+  <span style="cursor:pointer" onclick="openNav()">&#9776; </span>
+</div> <!-- End SideNav -->
+<a href="/" onclick="window.location.href='/'; return false;">
+<h2> WebPortal Authentication</h2>
+</a>
+  <!--When you click the WebPortal Authentication, it takes you back to the login screen-->
+</body>
+<!--END OF THE NAVIGATION BAR-->
+
+<div class="outer_form_admin">
+ <div id="admin_container">
+  <h1 id="admin_portal"> Admin Portal </h1>
+</div>
+
+ <!--Start of UserTables-->
+<div id="wrapper_1">
+ <div id="container_1">
+  <div id="vertical-menu" class="vertical-menu">
+  <a href="#" name="btn" onclick="showUsers()" id="users" class="active">USERS</a>
+  <a href="#" name="btn" onclick="showControl()" id="control">JETSON CONTROLLER</a>
+  <a href="#" name="btn" onclick="showTrack()" id="track">JETSON TRACKER</a>
+  </div>
+ </div>
+ <div class="tableMenu">
+   <div id ="userTables" ></div>
+   <div id="jetsonControl" style="display: none;">
+    <!--surround the select box with a "custom-select" DIV element. Remember to set the width:-->
+     <div class ="wrapper">
+      <div class="duration">
+        <b>Duration</b>
+        <input type="number" step="0.01" name ="duration" min ="0.01" max="10">
+      </div>
+      <div class="custom-select" style="width:200px;">
+        <select id="dropdown">
+          <option value="0">Select move:</option>
+          <option value="1">Forward</option>
+          <option value="2">Left</option>
+          <option value="3">Right</option>
+          <option value="4">Back</option>   
+        </select>
+      </div>
+      <input type="submit" onclick="createMove()">
+    </div>
+    
+   </div>
+   <div id="jetsonTrack" style="display: none;"></div>
+ </div>
+</div>
+</div>
+ <!--end of of UserTables-->
+
+  
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-storage.js"></script>
+<script src="jetson_firebase.js"></script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+To build: docker build -t html-server-image:jetson_server .
+To run: docker run -d -p 80:80 html-server-image:jetson_server
+To check running containers: docker -ps -a
+to check running images: docker images
+
+to remove containers: docker rm <id>
+to remove images: docker image rm <id>
+to remove all: docker rm -f $(docker ps -a -q)

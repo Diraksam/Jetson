@@ -1,0 +1,406 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500);
+*:focus {
+  outline: none;
+}
+
+/* START OF GRADIENT
+ * background credit: https://speckyboy.com/css-background-effects
+ */
+@import url(
+  https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,
+  700|Open+Sans:400,
+  300,
+  600
+);
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: "open sans", helvetica, arial, sans;
+  background: url(http://farm8.staticflickr.com/7064/6858179818_5d652f531c_h.jpg)
+    no-repeat center center fixed;
+  -webkit-background-size: cover;
+     -moz-background-size: cover;
+       -o-background-size: cover;
+  background-size: cover;
+  margin: 0; height: 100%; overflow: auto
+}
+#gradient {
+  width: 100%;
+  height: 100%;
+  position:absolute;
+  padding: 0px;
+  margin: 0px;
+  border-style:none;
+}
+/*END OF GRADIENT BACKGROUND*/
+
+/*WebPortal Authentication*/
+h2{
+border-radius:10px;
+text-align:center;
+    background-color: #000000;
+    color: #FFFFFF;
+    font-size:40px;
+    padding-bottom: 30px;
+    padding-top:30px;
+    padding-left:15px;
+    padding-right:15px;
+    position:absolute;
+    border:solid #000000;
+    top:5%;    
+    left:50%; 
+    font-family: Arial, Sans Serif;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+     transform: translate(-50%, -50%);
+    box-shadow: 3px 10px 5px rgba(10, 50, 0, 0.25);
+  }
+
+/*START OF THE LOGIN BOX*/
+#login-box {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  border-radius:10px;
+
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 540px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  background: #FFF;
+}
+
+
+/*PUSHES FIELD RIGHT {USERNAME, EMAIL, PASSWORD, CONFIRM PASSWORD*/
+.left {
+  position:absolute;
+  width: 600px;
+  height: 400px;
+  padding: 40px;
+}
+
+/*REGISTRATION FORM*/
+h1 {
+  border-radius:5px;
+  font-family: "open sans condensed";
+  font-weight: 200;
+  font-size: 1.35em;
+  padding-top:20px;
+  padding-bottom:20px;
+  margin:0;
+  background: #000;
+  color: #fff;
+  text-align:center;
+}
+
+
+/*Adjusts the size/ spacing/ color of the fields*/
+input[type="text"],
+input[type="password"] {
+  width: 325px;
+  height: 50px;
+  font-weight: 400;
+  font-size: 15px;
+  margin-bottom: 25px;
+  padding: 1px;
+  
+  display: block;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 1px solid #AAA;
+  font-family: 'Roboto', sans-serif; 
+  transition: 0.2s ease;
+}
+
+/*The input types*/
+input[type="text"]:focus,
+input[type="password"]:focus {
+  color: #16a085;
+  border-bottom: 2px solid #16a085;
+  transition: 0.2s ease;
+}
+
+/*The sign me up button*/
+input[type="submit"] {
+  position:relative;
+  width: 120px;
+  height: 50px;
+  font-size:15px;
+  font-weight: 425;
+  border-radius: 4px;
+  
+  text-transform: uppercase;
+  background: #000;
+  cursor: pointer;
+  border: none;
+  color: #FFF;
+  font-family: 'Roboto', sans-serif;
+  transition: 0.1s ease; 
+}
+
+/*What happens when you hover, etc*/
+input[type="submit"]:hover,
+input[type="submit"]:focus {
+  opacity: 0.8;
+  transition: 0.1s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+/*What happens when you activate*/
+input[type="submit"]:active {
+  opacity: 1;
+  transition: 0.1s ease;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+/*END OF REGISTRATION FORM*/
+
+ /* The side navigation menu */
+.sidenav {
+  height: 100%;           /* 100% Full-height */
+  width: 0;               /* 0 width - change this with JavaScript */
+  position: fixed;        /* Stay in place */
+  z-index: 1;             /* Stay on top */
+  top: 0;
+  left: 0;
+  background-color: #111; /* Black*/
+  overflow-x: hidden;     /* Disable horizontal scroll */
+  padding-top: 60px;      /* Place content 60px from the top */
+  transition: 0.5s;       /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left .5s;
+  padding: 20px;
+  font-size:55px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+} 
+/*END SIDE NAVIGATION BAR*/
+table {
+    border-collapse: collapse;
+    table-layout: auto;
+}
+
+th {
+  background-color:#000; color:#fff
+}
+th,td {
+  text-align:center;
+  padding: 10px 57px;
+}
+
+#jetsonTrack th, #jetsonTrack td {
+  text-align:center;
+  padding: 10px 20px;
+}
+
+tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+    background-color: gray;
+}
+
+
+.tableMenu {
+  overflow: auto;
+  display: inline-block;
+  width: 80%;
+  height: 100%;
+}
+
+button.users {
+	display: block;
+  position: relative;
+  float: left;
+  width: 90px;
+  padding: 0;
+  margin: 5px 10px 5px 10px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 50px;
+  color: #FFF;
+  border-radius: 5px;
+  transition: all 0.2s ;
+  background: black;
+  box-shadow: 0px 5px 0px 0px gray;
+} 
+
+.outer_form_admin
+{     
+      width:90vw;
+      height:60vh;
+      margin: 0 auto;
+      /*orange: FFA500*/
+      background-color:#fff;
+      margin-top:100px;
+      max-width:1200px;
+      border-radius:15px;
+}
+
+
+/*admin Portal*/
+#admin_portal
+{
+  font-family: "open sans condensed";
+  position:relative;
+  padding-top:20px;
+  padding-bottom:20px;
+  border-radius:3px;
+  text-align:center;
+  margin:0;
+  color:white;
+  background:black;
+}
+/*Wrapper for side menu*/
+#wrapper_1 { 
+  clear: left; 
+  position: relative; 
+  margin: 0 auto;
+  height: 87%;
+}
+/*Container for side menu*/
+#container_1 
+{ 
+  width:20%;
+  display: inline-block; 
+  float: left; 
+  position: relative; 
+}
+
+.vertical-menu {
+  text-align:center
+}
+/*button*/
+.vertical-menu a {
+  background-color: #000;
+  color: white;
+  display: block;
+  padding: 12px;
+  text-decoration: none;
+}
+/*When hovering*/
+.vertical-menu a:hover {
+  background-color: #fff;
+  color:#000;
+}
+/*When clicked*/
+.vertical-menu a.active {
+  background-color: #fff;
+  color: #000;
+}
+
+/* CSS for JETSON CONTROLLER */
+/*the container must be positioned relative:*/
+.custom-select {
+  position: relative;
+  font-family: Arial;
+  display: inline-block;
+  margin: 0 30px;
+}
+
+.custom-select select {
+  display: none; /*hide original SELECT element:*/
+}
+
+.select-selected {
+  background-color: Black;
+}
+
+/*style the arrow inside the select element:*/
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #fff transparent transparent transparent;
+}
+
+/*point the arrow upwards when the select box is open (active):*/
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #fff transparent;
+  top: 7px;
+}
+
+/*style the items (options), including the selected item:*/
+.select-items div,.select-selected {
+  color: #ffffff;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+  user-select: none;
+}
+
+/*style items (options):*/
+.select-items {
+  position: absolute;
+  background-color: Black;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+/*hide the items when the select box is closed:*/
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.wrapper{
+  text-align: center;
+  padding-top: 200px;
+  margin: 0 auto;
+}
+
+.duration {
+  text-align: center;
+  margin: 0 auto;
+  display: inline-block;
+}
+
+#jetsonControl {
+  width: 100%;
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<body>
+<!-- 
+    Built on these frameworks
+    Background credit:https://speckyboy.com/css-background-effects 
+    Login Form credit: User Brock Nunn Codepen "Simple Login Form Template"
+-->
+    <head>
+	<!--These are the dependencies-->	    
+ 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+    	<link rel="stylesheet" type="text/css" href="jetson_server.css">
+    	<script type="text/javascript" src="jetson_server.js"></script>
+    </head>
+  <body>
+
+    <div id="gradient" />
+    <!--end gradient background-->
+  <div class="log-form" id="log_form">  
+  <!--This is the login Form-->
+  <h2>Login to your account</h2>
+
+  <form id="form_login">
+    <!--Username-->
+    <input type="text"  name="username" title="username" placeholder="Username" />
+    <!--Password-->
+    <input type="password" name="password" title="username" placeholder="Password" />
+    <!--Login Button-->
+    <button type="submit" class="btn_login" onclick="authenticate_login()">Login</button>
+    
+    <!--Link for signup and forgotton username-->
+    <a class="forgot" href="#">Forgot Username?</a>
+    <a href="jetson_registration.html" class="signup">Register Here</a>
+  </form> <!--end form_login-->
+
+</div> <!--end log form --> 
+
+</body>
+  
+  <!-- This is the start of the side navigation bar-->
+  <div id="mySidenav" class="sidenav">
+  	<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  	<a href="#">Account</a>
+	<!--Check functionality of user who is logged in-->
+  	<a href="#">Admin</a>
+  	<a href="#">Contact</a>
+  	<a href="jetson_registration.html">Register</a>
+</div>
+<!-- 
+     Add all page content inside this div if you want the side 
+     nav to push page content to the right (not used if you only 
+     want the sidenav to sit on top of the page 
+-->
+<div id="main">
+
+  <span style="cursor:pointer" onclick="openNav()">&#9776; </span>
+</div> <!-- End SideNav -->
+
+  <h1> WebPortal Authentication</h1>
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-storage.js"></script>
+<script src="jetson_firebase.js"></script>
+
+</body>
+</html>
+  
