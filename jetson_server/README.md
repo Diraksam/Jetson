@@ -47,12 +47,8 @@ it looks. I am also thinking about doing something with the left over space on t
 
 ### UI after click:
 <img width="1680" alt="Screen Shot 2020-01-28 at 6 57 03 PM" src="https://user-images.githubusercontent.com/46547102/73325501-9cba1f80-4203-11ea-8719-6c9a02938e6a.png">
-=======
-# Web Portal Authentication 
 
-I set up the main UI for the WebPage. It's in its early stages of development. Will need to consider going over
-which pages are actually necessary. It has a gradient background which might change later depending on how busy
-it looks. I am also thinking about doing something with the left over space on the right side as well.
+# Web Portal Authentication 
 
 > Please do not git push --force into the repo.
 
